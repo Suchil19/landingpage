@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Permanent+Marker&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+/* Caja de reseteo de estilo*/
 *{
   padding: 0;
   margin: 0;  
@@ -8,11 +9,16 @@
   list-style: none;
 }
 
+body{
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 
 /* Colores*/
 :root{
     --color__principal: #202020;
-    --color__secundario:#00a49c;
+    --color__secundario:rgb(66, 66, 66);
     --color__terciario: #03ff85;
     /* colores basicos*/
     --color__blanco : #ebebeb;
@@ -58,4 +64,89 @@ a:hover{
     transition: .5s;
 }
 
+.checkbtn{
+    font-size: 30px;
+    color: var(--color__blanco);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+/* . para clase y # para identificador*/
 
+#check{
+    display: none;
+}
+
+@media (max-width:952px){
+    label.logo{
+        font-size: 25px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media(max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: var(--color__negro);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition:  all .5s;
+        z-index: 1;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 19px;
+    }
+    a:hover{
+        background: var(--color__secundario)
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+/****** Seccion de imagen y bienvenida *****/
+
+.hero{
+    background: linear-gradient(to bottom, #04d3da67, #26262667), url("../img/imgprincipal.png");
+    background-size: cover;
+    height: 50vh;
+    text-align: center;
+    border-bottom: 5px solid #1C6EA4;
+    border-radius: 0px 0px 70px 0px;
+}
+
+h2{
+    color: var(--color__blanco);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+}
+h3{
+    color: var(--color__blanco);
+    font-size: 19px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+}
