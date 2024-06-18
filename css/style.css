@@ -29,6 +29,8 @@ nav{
     background: var(--color__secundario);
     height: 80px;
     width: 100%;
+    position: fixed;
+    z-index: 9;
 }
 
 label.logo{
@@ -103,7 +105,7 @@ a:hover{
         left: -100%;
         text-align: center;
         transition:  all .5s;
-        z-index: 1;
+        z-index: 2;
 
     }
     nav ul li{
@@ -139,6 +141,7 @@ h2{
     top: 30%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
 
 }
 h3{
@@ -148,5 +151,129 @@ h3{
     top: 35%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-
+    z-index: 1;
 }
+
+
+/* padre */
+.flex__container{
+    background-color: var(--color__secundario);
+    border: 0px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 50px auto;
+    justify-content: center;
+    padding: 10px;
+    -webkit-box-shadow: 14px 10px 19px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 10px 19px -14px rgba(0,0,0,0.75);
+    box-shadow: 14px 10px 19px -14px rgba(0,0,0,0.75);
+    border-radius: 20px;
+}
+
+/* Ejercicio Flexbox*/
+.box__01{
+    font-size: 25px;
+    background-color: var(--color__primario);
+    background: linear-gradient(to bottom, #0373f44d, #d400ff7d), url("https://images.unsplash.com/photo-1580655653885-65763b2597d0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center no-repeat ;
+    background-size: cover;
+    width: 290px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    border: solid var(--color__blanco) 5px;
+    color: var(--color__blanco);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.box__02{
+    font-size: 25px;
+    background-color: var(--color__secundario);
+    background:linear-gradient(to bottom, #0373f44d, #d400ff7d), url("https://images.unsplash.com/photo-1545108629-89e675f81d96?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center no-repeat ;
+    background-size: cover;
+    width: 290px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    border: solid var(--color__blanco) 5px;
+    color: aliceblue;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.box__03{
+    font-size: 25px;
+    background-color: var(--color__primario);
+    background:linear-gradient(to bottom, #0373f44d, #d400ff7d), url("https://images.unsplash.com/photo-1594014390932-286596f6f6f4?q=80&w=1153&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center no-repeat ;
+    background-size: cover;
+    width: 290px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    border: solid var(--color__blanco) 5px;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color__blanco);
+}
+
+.box__04{
+    font-size: 25px;
+    background-color: var(--color-secundario);
+    background:linear-gradient(to bottom, #0373f44d, #d400ff7d), url("https://images.unsplash.com/photo-1573030945625-4fcd30afc35a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center no-repeat ;
+    background-size: cover;
+    width: 290px;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    border: solid var(--color__blanco) 5px;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color__blanco);
+}
+
+/* Footer */
+
+.footer{
+    background: var(--color__principal);
+    padding: 30px 0px;
+    text-align: center;color: var(--color__blanco);
+}
+.footer a{
+    font-size: 17px;
+    color: var(--color__blanco);
+}
+
+.footer .contenido__footer{
+    width: 100%;
+    margin: 30px 0px;
+    text-decoration: none;
+}
+
+.footer .contenido__footer ul{
+    width: 100%;
+}
+
+
+ .footer .contenido__footer a i{
+    font-size: 27px;
+    margin: 0 19px;
+ }
+
+ @media (max-width: 720px){
+    .footer{
+        text-align: left;
+        padding: 15px;
+    }
+
+
+    .footer .contenido__footer ul li{
+        display: block;
+        margin: 20x 0px;
+        text-align: left;
+    }
+ }
