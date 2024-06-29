@@ -19,7 +19,7 @@ body{
 /* Colores*/
 :root{
     --color__principal: #202020;
-    --color__secundario:rgb(66, 66, 66);
+    --color__secundario:rgb(31, 32, 32);
     --color__terciario: #03ff85;
     /* colores basicos*/
     --color__blanco : #ebebeb;
@@ -222,6 +222,11 @@ h3{
     border-radius: 20px;
     box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.3);
     overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+.tarjeta:hover{
+    transform: translateY(-30px);
 }
 
 .tarjeta img{
@@ -343,6 +348,68 @@ h3{
     color: var(--color__blanco);
 }
 
+
+/* Portada fotos */
+/* padre */
+.flex__container__fotos{
+    
+    border: 0px solid transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 90px;
+    border-radius: 20px;
+}
+/* Ejercicio Flexbox*/
+.portada__contacto{
+    font-size: 25px;
+    background-color: var(--color__primario);
+    background: linear-gradient(to bottom, #0373f44d, #d400ff7d), url("https://images.unsplash.com/photo-1511882150382-421056c89033?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center no-repeat ;
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    line-height: 150px;
+    text-align: center;
+    border: solid var(--color__blanco) 5px;
+    color: var(--color__blanco);
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.portada__contacto h1{
+    font-size: 45px;
+    line-height: 250px;
+    color: #03ff85;
+}
+
+/*Mapa*/
+
+.mapa{
+    max-width: 720px;
+    margin: 40px auto;
+}
+
+.mapa h1{
+    color: var(--color__terciario);
+    text-align: center;
+}
+
+iframe{
+    width: 100%;
+    margin: 0 auto;
+    border: 5px solid #202020 !important;
+}
+
+
+/*Termina mapa*/
+
+
+
+
 /* Footer */
 
 .footer{
@@ -392,3 +459,22 @@ h3{
         text-align: left;
     }
  }
+
+
+ /*** tarjeta de la pagina de fotos**/
+.card{
+    margin: 5% auto;
+    max-width: 720px;
+    width: 90%;
+}
+
+.card img{
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+    padding: 20px;
+
+}
+
+
+ /** termina tarjeta de pagina de fotos */
